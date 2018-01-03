@@ -33,7 +33,9 @@ MIDDLEWARE = [
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            ABS_PATH('templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,3 +81,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = ENV_STR('STATIC_URL', '/static/')
 STATIC_ROOT = ENV_STR('STATIC_ROOT', ABS_PATH('static'))
+STATICFILES_DIRS = (
+    ABS_PATH('project', 'static'),
+)
