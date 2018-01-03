@@ -11,6 +11,7 @@ SECRET_KEY = ENV_STR('SECRET_KEY', 'secret' if DEBUG else '')
 
 # Application definition
 INSTALLED_APPS = [
+    'testing_app.apps.TestingAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
