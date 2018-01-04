@@ -62,5 +62,7 @@ To run the automated test suite:
 ## Bootstrap theme
 
 Start Bootstrap - Resume by David Miller, Owner of Blackrock Digital
+
 https://github.com/BlackrockDigital/startbootstrap-resume
+
 http://davidmiller.io
