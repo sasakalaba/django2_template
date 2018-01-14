@@ -44,6 +44,7 @@ Create an empty project on github.
 
 Delete .git directory, then:
 
+    git init
 	git remote add origin git@github.com:<username>/<project_name>.git
 	git push origin master
 
