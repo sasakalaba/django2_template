@@ -45,12 +45,16 @@ Create an empty project on github.
 Delete .git directory, then:
 
     git init
-	git remote add origin git@github.com:<username>/<project_name>.git
-	git push origin master
+    git remote add origin git@github.com:<username>/<project_name>.git
+    Replace testing_app with your own app. (Find All 'testing' in your code editor).
+    Replace current templates and static files with your own.
+    git add *
+    git commit -m "First commit."
+    git push origin master
 
 Add licence via github.
 
-	https://help.github.com/articles/adding-a-license-to-a-repository/
+    https://help.github.com/articles/adding-a-license-to-a-repository/
 
 
 ## Automated tests
