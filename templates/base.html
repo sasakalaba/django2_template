@@ -36,7 +36,14 @@
     <!-- Plugin JavaScript -->
     <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
 
-    <!-- Custom scripts for this template -->
+    <!-- Custom scripts -->
     <script src="{% static 'js/resume.min.js' %}"></script>
+
+    <!-- Custom jquery -->
+    <script>
+        $(document).ready(function(){
+            {% block jQuery %}{% endblock %}
+        })
+    </script>
   </body>
 </html>

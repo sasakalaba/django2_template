@@ -45,7 +45,11 @@
                     <!-- Wizard container -->
                     <div class="wizard-container">
                         <div class="card wizard-card" data-color="red" id="wizard">
-                            <form action="" method="post">
+                            <div class="alert alert-danger alert-dismissable checkout-form-alert" style="display: none;">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <span class="checkout-form-error"></span>
+                            </div>
+                            <form class="checkout-form" action="" method="post">
                                 {% csrf_token %}
                         <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
 
@@ -201,6 +205,32 @@
     </div>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
     <script src="/static/js/checkout.js"></script>
+    <script>
+        {% block jquery %}
+            $('.checkout-form').submit(function(e){
+                e.preventDefault();
+                // console.log($(this).serialize())
+
+                var CheckoutAPIEndpoint = "{% url 'checkout' %}"
+                console.log($(this).serialize());
+                $.ajax({
+                    method: 'POST',
+                    data: $(this).serialize(),
+                    url: CheckoutAPIEndpoint,
+                    success: function(data){
+                        console.log(data);
+                        $('.checkout-form').parent().html("<p class='lead'>Success!</p>")
+                    },
+                    error: function(data){
+                        console.log('error');
+                        console.log(data);
+                        $(".checkout-form-alert").fadeIn();
+                        $('.checkout-form-error').text(data.responseJSON.email[0])
+                    }
+                })
+            })
+        {% endblock %}
+    </script>
 </body>
 
 </html>
