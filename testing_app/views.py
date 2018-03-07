@@ -7,3 +7,10 @@ def index(request):
     context = {}
 
     return HttpResponse(template.render(context, request))
+
+
+def checkout(request):
+    template = loader.get_template('checkout.html')
+    context = {}
+
+    return HttpResponse(template.render(context, request))
