@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.template import loader
+from testing_app.forms import CheckoutForm
 
 
 def index(request):
@@ -11,6 +12,19 @@ def index(request):
 
 def checkout(request):
     template = loader.get_template('checkout.html')
-    context = {}
+
+    if request.method == 'POST':
+        form = CheckoutForm(request.POST)
+
+        # TODO: validation
+        if form.is_valid():
+            pass
+        else:
+            pass
+
+    else:
+        form = CheckoutForm()
+
+    context = {'form': form}
 
     return HttpResponse(template.render(context, request))
