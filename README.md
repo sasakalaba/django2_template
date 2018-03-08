@@ -27,8 +27,6 @@ Navigate to project dir and install requirements:
     cd <project_name>
     pip install -r requirements.txt
 
-Create .env file with configuration settings, using env.sample as the starting point:
-
 Create .env file:
 
     cat .env_sample >> .env
