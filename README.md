@@ -24,9 +24,22 @@ Setup postgres:
 
 Navigate to project dir and install requirements:
 
+    cd <project_name>
     pip install -r requirements.txt
 
 Create .env file with configuration settings, using env.sample as the starting point:
+
+Create .env file:
+
+    cat .env_sample >> .env
+
+Generate autokey:
+
+    python -c "import string,random; uni=string.ascii_letters+string.digits+string.punctuation; print(repr(''.join([random.SystemRandom().choice(uni) for i in range(random.randint(45,50))])))"
+
+Set .env values:
+
+    nano .env
 
 Run the migrations:
 
