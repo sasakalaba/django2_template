@@ -75,6 +75,14 @@ To run the automated test suite:
     python manage.py test --settings=project.settings.test
 
 
+## Start server
+
+Start the server:
+
+    python manage.py collectstatic
+    python manage.py runserver
+
+
 ## Bootstrap theme
 
 Start Bootstrap - Resume by David Miller, Owner of Blackrock Digital
