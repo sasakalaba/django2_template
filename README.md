@@ -77,7 +77,7 @@ To run the automated test suite:
 
 ## Start server
 
-Start the server:
+Start the server and set static files:
 
     python manage.py collectstatic
     python manage.py runserver
