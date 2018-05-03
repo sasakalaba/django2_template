@@ -75,9 +75,9 @@ To run the automated test suite:
     python manage.py test --settings=project.settings.test
 
 
-## Start server
+## Runserver and static files
 
-Start the server and set static files:
+Runserver:
 
     python manage.py collectstatic
     python manage.py runserver
