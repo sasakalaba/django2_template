@@ -8,10 +8,10 @@ Clone the repo from GitHub:
 
     git clone https://github.com/sasakalaba/django2_template.git
 
-Create python3 virtualenv:
+Create python3 virtualenv (-a flag will always cd to project root upon activation):
 
     apt-get install python3 python3-doc
-    mkvirtualenv --python=/usr/bin/python3 <env_name>
+    mkvirtualenv --python=/path/to/python3 -a <project_dir>/ <env_name>
 
 Setup postgres:
 
