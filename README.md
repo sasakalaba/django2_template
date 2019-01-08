@@ -11,7 +11,7 @@ Clone the repo from GitHub:
 Create python3 virtualenv (-a flag will always cd to project root upon activation):
 
     apt-get install python3 python3-doc
-    mkvirtualenv --python=/path/to/python3 -a <project_dir>/ <env_name>
+    mkvirtualenv -p python3 -a <project_dir>/ <env_name>
 
 Setup postgres:
 
